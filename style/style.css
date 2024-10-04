@@ -1,0 +1,118 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* mes variables*/
+--root{
+    --p-bg:#00bf63;
+    --s-bg :#f2f2f2;
+    --p-color : #6e7684;
+    --h-color : #000c21 ;
+
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: variable(--h-color);
+}
+
+
+
+
+
+.logo {
+    width: 100px;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 80px;
+    background-color: #0000008a;
+    a:hover{
+        color: green;
+    }
+    
+}
+.carousel {
+    background: rgb(52, 54, 55);
+   
+
+    .row {
+        backdrop-filter: blur(4px);
+        padding: 20px;
+        /* background-color: antiquewhite; */
+       
+    }
+}
+
+.carousel-item img  {
+
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.5);
+  
+
+}
+
+.carousel-item {
+    background: rgb(20, 20, 20);
+    
+}
+
+
+
+
+
+.carousel-caption {
+
+    /* height: 50%; */
+    top: 30%;
+
+}
+
+
+/* main content  */
+
+
+
+#section1{
+    background-color:variable(--s-bg);
+}
+
+.feature-item {
+    display: flex;
+}
+
+.feature-icon span {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.636);
+    background: green;
+    border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
+    animation-name: animat;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
+}
+
+@keyframes animat {
+    from{
+        transform: rotate(100deg)
+    };
+    to{ transform: rotate(0deg);}
+}
