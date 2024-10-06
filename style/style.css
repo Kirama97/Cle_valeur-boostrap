@@ -11,7 +11,7 @@
 
 /* mes variables*/
 --root{
-    --p-bg:#00bf63;
+    --primaire: #198754;
     --s-bg :#f2f2f2;
     --p-color : #6e7684;
     --h-color : #000c21 ;
@@ -20,15 +20,27 @@
 }
 
 h1,h2,h3,h4,h5,h6 {
-    color: variable(--h-color);
+    color: var(--h-color);
 }
 
 
 
+body::-webkit-scrollbar {
+    
+    width: 9px;
+ }
+ 
+
+ 
+ body::-webkit-scrollbar-thumb {
+    background-color: #198754 ;
+    border-radius: 5px;
+ }
+ 
 
 
 .logo {
-    width: 100px;
+    width: 120px;
 }
 
 .navbar {
@@ -36,15 +48,23 @@ h1,h2,h3,h4,h5,h6 {
     z-index: 1;
     top: 0;
     left: 0;
-    height: 80px;
-    background-color: #0000008a;
+    height:70px;
+    background-color:#f2f2f2;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.358) ;
     a:hover{
-        color: green;
+        color:  #198754;
+    }
+
+    .btn:hover{
+        background-color: white;
+        color: #198754;
     }
     
 }
 .carousel {
     background: rgb(52, 54, 55);
+   
+    z-index: 0;
    
 
     .row {
@@ -85,8 +105,8 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
-#section1{
-    background-color:variable(--s-bg);
+.section1{
+    background-color:#f2f2f2;
 }
 
 .feature-item {
@@ -97,12 +117,14 @@ h1,h2,h3,h4,h5,h6 {
     width: 90px;
     height: 90px;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.636);
-    background: green;
+    background: #198754;
     border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
     animation-name: animat;
+    box-shadow: 0px 1px 3px 2px rgba(77, 72, 72, 0.421);
     animation-duration: 5s;
     animation-delay: 1s;
     animation-direction: alternate;
@@ -110,9 +132,224 @@ h1,h2,h3,h4,h5,h6 {
     transition: 0.5s;
 }
 
+
+
 @keyframes animat {
-    from{
-        transform: rotate(100deg)
-    };
-    to{ transform: rotate(0deg);}
+    0% {
+        border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
+    }
+    25% {
+        border-radius: 69% 31% 19% 81% / 43% 37% 63% 57%;
+    }
+    50% {
+        border-radius: 67% 33% 16% 84% / 57% 37% 63% 43%;
+    }
+    75% {
+        border-radius: 77% 23% 61% 39% / 36% 61% 39% 64%;
+    }
+    100% {
+        border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
+    }
 }
+
+/* section 2 */
+
+.section2 {
+    background: linear-gradient(rgba(12, 125, 69, 0.9), rgba(31, 46, 78, 0.9)), url(/Ressources/images/chambre2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conteur-item-icon {
+  
+    background-color: rgba(31, 46, 78, 0.9);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0px 1px 3px 2px rgba(77, 72, 72, 0.421);
+    border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
+
+}
+
+
+
+/* section 3 */
+
+
+.section3 {
+    background-color: #f2f2f2;
+}
+
+.service-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.252);
+    border-radius: 10px;
+    background: #f2f2f2;
+    transition: 0.9s;
+   color: white;
+   transition: border-radius 0.4s ease;
+ 
+}
+
+.service-item:hover {
+    border-radius: 25% 20% 9% 7% / 39% 46% 54% 61%;
+    box-shadow: 0 0 10px  #19875482;
+
+}
+
+
+
+ .section3 .row :nth-child(1) .service-item{
+    background-image: linear-gradient(rgba(11, 9, 9, 0.527),rgba(17, 28, 21, 0.905)),url(/Ressources/images/ia_house.jpg);
+    background-size: cover;
+
+
+}
+ .section3 .row :nth-child(2) .service-item{
+    background-image: linear-gradient(rgba(11, 9, 9, 0.663),rgba(36, 49, 41, 0.353)),url(/Ressources/images/chambre2.jpg);
+    background-size: cover;
+
+}
+ .section3 .row :nth-child(3) .service-item{
+    background-image: linear-gradient(rgba(11, 9, 9, 0.663),rgba(36, 49, 41, 0.466)),url(/Ressources/images/ap1.jpg);
+    background-size: cover;
+
+}
+ .section3 .row :nth-child(4) .service-item{
+    background-image: linear-gradient(rgba(11, 9, 9, 0.663),rgba(36, 49, 41, 0.466)),url(/Ressources/images/ap3.jpg);
+    background-size: cover;
+
+}
+ .section3 .row :nth-child(5) .service-item{
+    background-image: linear-gradient(rgba(11, 9, 9, 0.663),rgba(36, 49, 41, 0.466)),url(/Ressources/images/chambre1.jpg);
+    background-size: cover;
+
+}
+ .section3 .row :nth-child(6) .service-item{
+    background-image: linear-gradient(rgba(11, 9, 9, 0.663),rgba(36, 49, 41, 0.466)),url(/Ressources/images/bg2.webp);
+    background-size: cover;
+
+}
+
+.service-icon {
+    background-color: #198754;
+    padding: 20px;
+    border-radius: 67% 33% 29% 71% / 39% 46% 54% 61%;
+    animation-name: animat;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
+    color: rgba(31, 46, 78, 0.9);
+}
+
+
+
+/* footer  */
+.footer  {
+
+  background: linear-gradient(rgba(12, 125, 69, 0.9), rgba(31, 46, 78, 0.9));
+  
+
+}
+
+.footer .footer-item a {
+    color: rgba(255, 255, 255, 0.442);
+    transition: color 0.5s ease;
+}
+.footer .footer-item a:hover {
+    color:#000c21;
+}
+
+.footer  a {
+    text-decoration: none;
+}
+
+
+
+/* page appartement */
+
+
+.appartement-item {
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: #45624729;
+    transition: 0.5s;
+    z-index: 0;
+   
+   
+}
+
+.appartement-content p {
+    font-weight: 500;
+    color: #198754;
+    font-size: 1.5rem;
+}
+
+
+
+/* tableau */
+
+.table  {
+    text-align: center;
+    color: white;
+     border-radius: 10px;
+    
+   
+    
+   
+}
+
+.table th {
+    background-color: #198754;
+    color: white;
+    border-radius: 10px;
+   
+    
+
+}
+
+.table tr ,td ,th {
+    border: 3px solid white;
+}
+
+.table td:hover {
+    background-color: #5886a5;
+}
+.table th:hover{
+    background-color: #428d56;
+}
+
+
+
+.table td {
+    background-color: #c4d4df5d;
+    
+    border-radius: 10px;
+   
+
+    
+}
+
+table th ,td{
+    padding: 25px;
+   
+    
+
+}
+
+
+
