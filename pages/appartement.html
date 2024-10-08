@@ -297,8 +297,8 @@
             <div class="container py-5">
                
                         <h1 class="text-center">liste d'appartement disponible </h1>
-                        <p class="text-center my-3">Tapez quelque chose dans le champs de saisie pour rechercher dans le table des appartements</p>
-                        <input type="text" class="form-control my-3" id="rechercheI" placeholder="recherche...">
+                        <p class="text-center my-3">Tapez quelque chose dans le champs de saisie pour rechercher dans la liste des appartements</p>
+                        <input type="text" class="form-control  is-valid my-3" id="rechercheI" placeholder="Recherche...">
                         <table class="table table-borderless text-center">
                             <thead >
                                 <tr >
@@ -332,7 +332,7 @@
                                     <td>Immeuble MBACKE</td>
                                     <td>12 Av G. Pompidou</td>
                                     <td>200.000</td>
-                                    <td>m²</td>
+                                    <td> 160 m²</td>
                                     
                                 </tr>
                                 <tr>
@@ -458,21 +458,7 @@
         </div>
     </div>
     
-
-    <script>
-        
-        //ce script me permmet de filter et de faire la recherche des appartement disponible dans le table .j'utilise jquery
-     
-            $(document).ready(function(){
-              $("#rechercheI").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#rechercheC tr").filter(function() {
-                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-              });
-            });
-
-      </script>
+    <script src="/script/script.js"></script>
    
 </body>
 </html>
