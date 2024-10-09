@@ -55,16 +55,26 @@ body::-webkit-scrollbar {
     }
     
 }
+
+.navbar-collapse.show {
+    /* height: 400px; */
+    padding: 20px;
+    width: 100%;
+    background-color:#f2f2f2;
+    display: flex;
+    justify-content: space-around;
+}
+
+
 .carousel {
     background: rgb(52, 54, 55);
    
     z-index: 0;
-   
 
-    .row {
+    .row ,.container {
         backdrop-filter: blur(4px);
         padding: 20px;
-        background-color: rgba(17, 17, 17, 0.041);
+        /* background-color: rgba(17, 17, 17, 0.041); */
         border-radius: 5px;
        
     }
@@ -107,6 +117,9 @@ body::-webkit-scrollbar {
 .feature-item {
     display: flex;
 }
+
+
+/* mr diallo cette animation permet de bougé mes span de maniere fluide en changant les bordures */
 
 .feature-icon span {
     width: 90px;
@@ -307,6 +320,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
     
    
    
